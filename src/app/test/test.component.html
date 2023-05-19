@@ -1,0 +1,13 @@
+<p>Pytanie nr {{aktualnePytanie+1}}</p>
+<p>{{pytania[aktualnePytanie].tresc}}</p>
+
+<form (ngSubmit)="dalej()">
+<div *ngFor="let odp of pytania[aktualnePytanie].odpowiedzi; index as i">
+<input type="radio" id="pytanie1" name="pytanka" value="{{i}}" 
+[(ngModel)] = "udzielonaOdpowiedz">
+<label for="pytanie1">{{odp}}</label>
+</div>
+<button type="submit" >Dalej</button>
+
+</form>
+Zdobyto punktów{{zdobytePunkty}}

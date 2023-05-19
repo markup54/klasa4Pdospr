@@ -1,0 +1,6 @@
+<h3>Wszystkie samochody</h3>
+<div *ngFor="let samochod of samochody" (click)="pokaz(samochod)">
+    <p >{{samochod.marka}}</p>
+    <hr>
+</div>
+<app-szcz [aktualnySamochod]="aktualnySamochod"></app-szcz>
